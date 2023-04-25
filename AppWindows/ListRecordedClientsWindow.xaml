@@ -1,0 +1,69 @@
+﻿<Window x:Class="LearnSchoolApp.AppWindows.ListRecordedClientsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LearnSchoolApp.AppWindows"
+        mc:Ignorable="d"
+        Icon="/Resources/school_logo.ico"
+        Title="Список заявок" Height="450" Width="900"
+        Closed="Window_Closed">
+    <Grid>
+        <ListView x:Name="LVRecordingClient">
+            <ListView.Resources>
+                <Style TargetType="ListViewItem">
+                    <Setter Property="Background" Value="{Binding BGColor}" />
+                </Style>
+            </ListView.Resources>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="Название услуги: "
+                                       FontFamily="Comic Sans MS"
+                                       FontSize="15"/>
+                            <TextBlock Text="{Binding Service.Title}"
+                                       FontFamily="Comic Sans MS"
+                                       FontSize="15"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="ФИО: "
+                                       FontFamily="Comic Sans MS"
+                                       FontSize="15"/>
+                            <TextBlock Text="{Binding FullName}"
+                                       FontFamily="Comic Sans MS"
+                                       FontSize="15"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="{Binding StartTimes}"
+                                       FontFamily="Comic Sans MS"
+                                       FontSize="15"
+                                       Foreground="{Binding Color}"/>
+                            <TextBlock Text="{Binding StartTime}"
+                                       FontFamily="Comic Sans MS"
+                                       FontSize="15"
+                                       Visibility="Collapsed"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="Email: "
+                                       FontFamily="Comic Sans MS"
+                                       FontSize="15"/>
+                            <TextBlock Text="{Binding Client.Email}"
+                                       FontFamily="Comic Sans MS"
+                                       FontSize="15"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="Телефон: "
+                                       FontFamily="Comic Sans MS"
+                                       FontSize="15"/>
+                            <TextBlock Text="{Binding Client.Phone}"
+                                       FontFamily="Comic Sans MS"
+                                       FontSize="15"/>
+                        </StackPanel>
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </Grid>
+</Window>

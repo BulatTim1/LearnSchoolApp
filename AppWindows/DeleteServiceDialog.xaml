@@ -1,0 +1,51 @@
+﻿<Window x:Class="LearnSchoolApp.AppWindows.DeleteServiceDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LearnSchoolApp.AppWindows"
+        mc:Ignorable="d"
+        Icon="/Resources/school_logo.ico"
+        Title="Подтверждение" Height="150" Width="300">
+    <Grid>
+        <StackPanel VerticalAlignment="Center"
+                    HorizontalAlignment="Center">
+            <TextBlock x:Name="TBNameProduct"
+                       Text="{Binding Title, StringFormat='Вы точно хотите удалить {0}?'}"
+                       HorizontalAlignment="Center"
+                       FontFamily="Comic Sans MS"
+                       FontSize="15"/>
+            <StackPanel Orientation="Horizontal"
+                        Margin="0,10,0,0"
+                        HorizontalAlignment="Center">
+                <CheckBox x:Name="CBDeleteImages" Margin="0,0,10,0"/>
+                <TextBlock Text="Удалить дополнителные фотографии?"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal"
+                        Margin="0,10,0,0"
+                        HorizontalAlignment="Center">
+                <Button x:Name="BAgree"
+                        Click="BAgree_Click"
+                        Content="Да"
+                        Width="55"
+                        Margin="0,0,10,0"
+                        BorderBrush="#cccccc"
+                        BorderThickness="3"
+                        Background="White"
+                        FontFamily="Comic Sans MS"
+                        FontSize="15"/>
+                <Button x:Name="BCancel"
+                        Click="BCancel_Click"
+                        Content="Нет"
+                        Width="55"
+                        BorderBrush="#cccccc"
+                        BorderThickness="3"
+                        Background="White"
+                        FontFamily="Comic Sans MS"
+                        FontSize="15"/>
+            </StackPanel>
+        </StackPanel>
+        
+        
+    </Grid>
+</Window>

@@ -1,0 +1,65 @@
+﻿<Page x:Class="LearnSchoolApp.Pages.RecordClientPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:LearnSchoolApp.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="RecordClientPage">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        <StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock x:Name="TBTitle"
+                   FontFamily="Comic Sans MS"
+                   FontSize="20"/>
+                <TextBlock x:Name="TBDuration"
+                   FontFamily="Comic Sans MS"
+                   FontSize="20"/>
+            </StackPanel>
+            <TextBlock Text="Клиент"
+                   FontFamily="Comic Sans MS"
+                   FontSize="15"/>
+            <ComboBox x:Name="CBClient"
+                      FontFamily="Comic Sans MS"
+                      DisplayMemberPath="LastName"
+                      SelectedItem="{Binding Client}"/>
+            <TextBlock Text="Дата записи"
+                       FontFamily="Comic Sans MS"
+                       FontSize="15"/>
+            <DatePicker x:Name="DPDate"
+                        FontFamily="Comic Sans MS"
+                        FontSize="15"/>
+            <TextBlock Text="Время записи"
+                   FontFamily="Comic Sans MS"
+                   FontSize="15"/>
+            <TextBox x:Name="TBTime"
+                     FontFamily="Comic Sans MS"
+                     FontSize="15"
+                     MaxLength="5"/>
+            <TextBlock Text="Комментарий"
+                   FontFamily="Comic Sans MS"
+                   FontSize="15"/>
+            <TextBox x:Name="TBComment"
+                     FontFamily="Comic Sans MS"
+                     FontSize="15"/>
+        </StackPanel>
+        <Button x:Name="BSave"
+                    Click="BSave_Click"
+                    Content="Сохранить изменения"
+                    BorderBrush="#cccccc"
+                    BorderThickness="3"
+                    Background="White"
+                    FontFamily="Comic Sans MS"
+                    FontSize="15"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Bottom"/>
+        
+        
+    </Grid>
+</Page>
