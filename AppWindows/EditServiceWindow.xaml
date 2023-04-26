@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:LearnSchoolApp.AppWindows"
         mc:Ignorable="d"
         Icon="/Resources/school_logo.ico"
-        Title="Редактирование продукта" MinHeight="400" MinWidth="800"
+        Title="Редактирование услуги" MinHeight="400" MinWidth="800"
         Loaded="Window_Loaded">
     <Grid>
         <Grid.RowDefinitions>

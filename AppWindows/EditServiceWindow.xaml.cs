@@ -78,7 +78,7 @@ namespace LearnSchoolApp.AppWindows
                 error += "Длительность не может быть больше 4 часов";
             if (String.IsNullOrWhiteSpace(error) == false)
             {
-                MessageBox.Show(error);
+                MessageBox.Show(error, "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
             }
             contextService.DurationInSeconds = int.Parse(TBDuration.Text) * 60;

@@ -33,7 +33,7 @@ namespace LearnSchoolApp.Model
             get
             {
                 string result = "";
-                if ((Convert.ToDateTime(StartTime) - DateTime.Now).Hours < 1)
+                if ((Convert.ToDateTime(StartTime) - DateTime.Now).Hours < 1 && (Convert.ToDateTime(StartTime) - DateTime.Now).Days == 0)
                 {
                     result = "#ff6666";
                 }
@@ -50,7 +50,7 @@ namespace LearnSchoolApp.Model
             get
 			{
 				string result = "";
-				if ((Convert.ToDateTime(StartTime) - DateTime.Now).Hours < 1)
+				if ((Convert.ToDateTime(StartTime) - DateTime.Now).Hours < 1 && (Convert.ToDateTime(StartTime) - DateTime.Now).Days == 0)
 				{
 					result = "#E7FABF";
 				}
